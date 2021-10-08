@@ -1,0 +1,96 @@
+.contact-wrapper {
+  width: calc((100% - 30px) / 2);
+}
+.subscription-links {
+  width: calc((100% - 30px) / 2);
+}
+.page-footer {
+  display: flex;
+  background-color: $contrast-background-color;
+  background-size: cover;
+  color: $white-color;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+.address {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  margin-top: 20px;
+
+  & .contacts {
+    display: inline-block;
+    color: $footer-color;
+  }
+  &-name {
+    margin-bottom: 9px;
+  }
+}
+
+.tel {
+  margin-top: 9px;
+}
+.container-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.contact-subscribtion-wrapper {
+  display: flex;
+  align-items: baseline;
+  width: calc((100% - 30px) / 2);
+  justify-content: space-between;
+}
+
+.subscription-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+}
+.footer .social-network-icon {
+  fill: $white-color;
+}
+
+/* оформление формы ПОДПИШИТЕСЬ НА РАССЫЛКУ*/
+
+.input-email {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  margin-right: 20px;
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  color: $white-color;
+  border-radius: 4px;
+}
+
+.subscribe-by-mail {
+  width: calc((100% - 30px) / 2);
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subscribe-button {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+
+  &-text {
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: $white-color;
+    margin-right: 10px;
+  }
+}
