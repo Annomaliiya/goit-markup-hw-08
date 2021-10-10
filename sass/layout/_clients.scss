@@ -3,11 +3,11 @@
   align-items: center;
   margin-left: -30px;
   margin-bottom: -30px;
+  flex-wrap: wrap;
 }
 .clients-item {
   margin-left: 30px;
   margin-bottom: 30px;
-  flex-basis: calc((100% - 180px) / 6);
 
   &-link {
     width: 100%;
@@ -34,4 +34,20 @@
 .clients-icon {
   display: block;
   color: inherit;
+}
+.clients-item {
+  flex-basis: calc((100% - 60px) / 2);
+}
+
+//768
+@media screen and (min-width: 768px) {
+  .clients-item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+//1200
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    flex-basis: calc((100% - 180px) / 6);
+  }
 }

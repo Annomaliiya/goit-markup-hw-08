@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .subscription-links > .social-network-list {
-  justify-content: flex-start;
+  justify-content: center;
 }
 .social-network-list .social-network-item:not(:last-child) {
   margin-right: 10px;
@@ -36,4 +36,10 @@
 .social-network-icon {
   display: block;
   align-self: center;
+}
+//1200
+@media screen and (min-width: 1200px) {
+  .subscription-links > .social-network-list {
+    justify-content: flex-start;
+  }
 }
