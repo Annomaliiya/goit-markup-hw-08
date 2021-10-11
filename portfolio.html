@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container menu">
+      <div class="container menu header-container">
         <nav class="navigation">
           <a class="logo" href="./index.html"
             ><span class="blue">Web</span>Studio</a
@@ -29,13 +29,75 @@
             <li class="site-nav-items">
               <a class="current-page" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="site-nav-items"><a href="">Контакты</a></li>
+            <li class="site-nav-items"><a class="link" href="">Контакты</a></li>
           </ul>
         </nav>
+        <button
+          class="open-menu-btn"
+          data-menu-open
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" data-menu>
+          <button class="mobile-menu-close-btn" data-menu-close>
+            <svg class="mobile-menu-close-icon" width="19" height="19">
+              <use href="./images/icons.svg#icon-mob-menu-close"></use>
+            </svg>
+          </button>
+          <div class="container mobile-menu-container">
+            <nav class="mobile-menu-nav">
+              <ul class="mobile-menu-list list">
+                <li class="mobile-menu-list-item">
+                  <a href="./index.html" class="mobile-menu-list-link link"
+                    >Cтудия</a
+                  >
+                </li>
+                <li class="mobile-menu-list-item">
+                  <a href="./portfolio.html" class="mobile-menu-list-link link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-menu-list-item">
+                  <a href="" class="mobile-menu-list-link link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="mobile-menu-contacts list">
+              <li class="mobile-menu-contacts-item">
+                <a class="mobile-menu-tel" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu-contacts-item">
+                <a class="mobile-menu-email" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu-social-links list">
+              <li class="mobile-menu-social-links-item">
+                <a href="">Instagram</a>
+              </li>
+              <li class="mobile-menu-social-links-item">
+                <a href="">Twitter</a>
+              </li>
+              <li class="mobile-menu-social-links-item">
+                <a href="">Facebook</a>
+              </li>
+              <li class="mobile-menu-social-links-item">
+                <a href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <ul class="contacts list">
           <li class="site-nav-items">
             <div class="email">
-              <a class="contacts-links" href="mailto:info@devstudio.com">
+              <a class="contacts-links link" href="mailto:info@devstudio.com">
                 <svg class="email-icon">
                   <use href="./images/icons.svg#icon-email"></use>
                 </svg>
@@ -45,7 +107,7 @@
           </li>
           <li class="site-nav-items">
             <div class="phone">
-              <a class="contacts-links" href="tel:+380961111111">
+              <a class="contacts-links link" href="tel:+380961111111">
                 <svg class="phone-icon">
                   <use href="./images/icons.svg#icon-telephone"></use>
                 </svg>
@@ -84,13 +146,29 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp1.jpg"
-                    alt="открытое окно сайта в браузере на
+                  <picture>
+                    <source
+                      srcset="./images/imgp1.jpg 1x, ./images/imgp1@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp1-tab.jpg    1x,
+                        ./images/imgp1-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp1-mob.jpg    1x,
+                        ./images/imgp1-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp1-mob.jpg"
+                      alt="открытое окно сайта в браузере на
             экране ноутбука"
-                    width="370"
-                  />
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p>
                       Технокряк это современная площадка распространения
@@ -109,12 +187,28 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp2.jpg"
-                    alt="два баскетболиста деруться за мяч"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgp2.jpg 1x, ./images/imgp2@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp2-tab.jpg    1x,
+                        ./images/imgp2-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp2-mob.jpg    1x,
+                        ./images/imgp2-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp2-mob.jpg"
+                      alt="два баскетболиста деруться за мяч"
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -130,12 +224,28 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp3.jpg"
-                    alt="логотип рыбного ресторана"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgp3.jpg 1x, ./images/imgp3@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp3-tab.jpg    1x,
+                        ./images/imgp3-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp3-mob.jpg    1x,
+                        ./images/imgp3-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp3-mob.jpg"
+                      alt="логотип рыбного ресторана"
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -151,12 +261,28 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp4.jpg"
-                    alt="наушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgp4.jpg 1x, ./images/imgp4@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp4-tab.jpg    1x,
+                        ./images/imgp4-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp4-mob.jpg    1x,
+                        ./images/imgp4-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp4-mob.jpg"
+                      alt="наушники"
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -172,12 +298,28 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp5.jpg"
-                    alt="большая белая коробка и маленькая розовая"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgp5.jpg 1x, ./images/imgp5@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp5-tab.jpg    1x,
+                        ./images/imgp5-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp5-mob.jpg    1x,
+                        ./images/imgp5-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp5-mob.jpg"
+                      alt="большая белая коробка и маленькая розовая"
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -193,13 +335,29 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp6.jpg"
-                    alt="открытое окно сайта в браузере на
+                  <picture>
+                    <source
+                      srcset="./images/imgp6.jpg 1x, ./images/imgp6@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp6-tab.jpg    1x,
+                        ./images/imgp6-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp6-mob.jpg    1x,
+                        ./images/imgp6-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp6-mob.jpg"
+                      alt="открытое окно сайта в браузере на
             экране компьютера"
-                    width="370"
-                  />
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -215,12 +373,28 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp7.jpg"
-                    alt="разворот издания"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgp7.jpg 1x, ./images/imgp7@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp7-tab.jpg    1x,
+                        ./images/imgp7-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp7-mob.jpg    1x,
+                        ./images/imgp7-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp7-mob.jpg"
+                      alt="разворот издания"
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -236,12 +410,28 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp8.jpg"
-                    alt="этикетка для проекта"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgp8.jpg 1x, ./images/imgp8@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp8-tab.jpg    1x,
+                        ./images/imgp8-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp8-mob.jpg    1x,
+                        ./images/imgp8-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp8-mob.jpg"
+                      alt="этикетка для проекта"
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -255,12 +445,28 @@
             <li class="item">
               <a class="project-item-link" href="">
                 <div class="item-overlay">
-                  <img
-                    class="item-image"
-                    src="images/imgp9.jpg"
-                    alt="руки на клавиатуре ноутбука с открытым приложением для бизнесса"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/imgp9.jpg 1x, ./images/imgp9@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/imgp9-tab.jpg    1x,
+                        ./images/imgp9-tab@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="item-image"
+                      srcset="
+                        ./images/imgp9-mob.jpg    1x,
+                        ./images/imgp9-mob@2x.jpg 2x
+                      "
+                      src="./images/imgp9-mob.jpg"
+                      alt="руки на клавиатуре ноутбука с открытым приложением для бизнеса"
+                    />
+                  </picture>
                   <div class="item-overlay-description">
                     <p></p>
                   </div>
@@ -274,77 +480,84 @@
           </ul>
         </div>
       </section>
-    </main>
-    <footer class="page-footer">
-      <div class="container-footer container">
-        <div class="contact-subscribtion-wrapper">
-          <div class="contact-wrapper">
-            <a class="logo" href="./index.html"
-              ><span class="blue">Web</span>Studio</a
-            >
-            <address class="address">
-              <p class="address-name">г. Киев, пр-т Леси Украинки, 26</p>
-              <a class="contacts" href="mailto:info@example.com"
-                >info@example.com</a
-              ><br />
-              <a class="contacts tel" href="tel:+380961111111"
-                >+38 096 111 11 11</a
+      <footer class="page-footer">
+        <div class="container-footer container">
+          <div class="contact-subscribtion-wrapper">
+            <div class="contact-wrapper">
+              <a class="logo" href="./index.html"
+                ><span class="blue">Web</span>Studio</a
               >
-            </address>
+              <address class="address">
+                <p class="address-name">г. Киев, пр-т Леси Украинки, 26</p>
+                <a class="contacts" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+                <a class="contacts tel" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </address>
+            </div>
+            <div class="subscription-links">
+              <p class="subscription-text">ПРИСОЕДИНЯЙТЕСЬ</p>
+              <ul class="social-network-list list">
+                <li class="social-network-item footer">
+                  <a href="" class="social-network-link">
+                    <svg class="social-network-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-network-item footer">
+                  <a href="" class="social-network-link">
+                    <svg class="social-network-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-network-item footer">
+                  <a href="" class="social-network-link">
+                    <svg class="social-network-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-network-item footer">
+                  <a href="" class="social-network-link">
+                    <svg class="social-network-icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="subscription-links">
-            <p class="subscription-text">ПРИСОЕДИНЯЙТЕСЬ</p>
-            <ul class="social-network-list list">
-              <li class="social-network-item footer">
-                <a href="" class="social-network-link">
-                  <svg class="social-network-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-network-item footer">
-                <a href="" class="social-network-link">
-                  <svg class="social-network-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-network-item footer">
-                <a href="" class="social-network-link">
-                  <svg class="social-network-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-network-item footer">
-                <a href="" class="social-network-link">
-                  <svg class="social-network-icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+          <div class="subscribe-by-mail">
+            <p class="subscription-text">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
+            <form class="subscribe-form">
+              <input
+                type="email"
+                name="user-email"
+                class="input-email"
+                placeholder="E-mail"
+                required
+              />
+              <button class="subscribe-button button" type="submit">
+                <span class="subscribe-button-text">Подписаться</span>
+                <svg class="" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send-mail"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
-        <div class="subscribe-by-mail">
-          <p class="subscription-text">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
-          <form class="subscribe-form">
-            <input
-              type="email"
-              name="user-email"
-              class="input-email"
-              placeholder="E-mail"
-              required
-            />
-            <button class="subscribe-button button" type="submit">
-              <span class="subscribe-button-text">Подписаться</span>
-              <svg class="" width="24" height="24">
-                <use href="./images/icons.svg#icon-send-mail"></use>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </footer>
+      </footer>
+      <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"
+      ></script>
+      <script defer src="js/mobile-menu.js"></script>
+    </main>
   </body>
 </html>

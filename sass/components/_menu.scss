@@ -11,27 +11,11 @@
   display: none;
 }
 
-.mobile-menu {
-  margin-left: auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  line-height: 0;
-
-  &-button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    padding: 0;
-
-    &:hover,
-    &:focus {
-      fill: $accent-color;
-    }
-  }
-  &-icon {
-    display: block;
-  }
-}
+// .mobile-menu {
+//   margin-left: auto;
+//   padding-bottom: 10px;
+//   padding-top: 10px;
+//   line-height: 0;
 
 //768
 @media screen and (min-width: 768px) {

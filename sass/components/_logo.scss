@@ -8,3 +8,10 @@
 .blue {
   color: $accent-color;
 }
+// mobile
+@media screen and (max-width: 767px) {
+  .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
