@@ -499,6 +499,7 @@ img {
 
 .type-message {
   margin-top: 4px;
+  margin-bottom: 20px;
   width: 100%;
   height: 120px;
   resize: none;
@@ -520,7 +521,6 @@ img {
 }
 
 .modal-form-check-label {
-  display: flex;
   margin-top: 20px;
   align-items: center;
   letter-spacing: 0.03em;
@@ -534,7 +534,7 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .modal {
     max-width: 450px;
     max-height: 609px;
@@ -552,6 +552,7 @@ img {
   .modal {
     max-width: 528px;
     max-height: 580px;
+    overflow-y: unset;
   }
   .modal-form-check-label {
     font-size: 14px;
@@ -578,7 +579,7 @@ img {
 }
 
 .icon-checkbox {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   position: relative;
   margin-right: 7px;
