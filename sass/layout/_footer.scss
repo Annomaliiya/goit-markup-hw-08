@@ -145,11 +145,10 @@
     padding-top: 0;
     width: calc((100% - 30px) / 2);
   }
+  .input-email {
+    margin-right: 12px;
+  }
 }
-
-// .tel {
-//   margin-top: 9px;
-// }
 
 .footer .social-network-icon {
   fill: $white-color;

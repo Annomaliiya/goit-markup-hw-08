@@ -1277,6 +1277,9 @@ img {
     padding-top: 0;
     width: calc((100% - 30px) / 2);
   }
+  .input-email {
+    margin-right: 12px;
+  }
 }
 
 .footer .social-network-icon {
