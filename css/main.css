@@ -196,14 +196,11 @@ img {
 
 .mobile-menu-contacts {
   margin-top: auto;
+  margin-bottom: 64px;
 }
 
 .mobile-menu-contacts-item:first-child {
   margin-bottom: 32px;
-}
-
-.mobile-menu-contacts-item:last-child {
-  margin-bottom: 64px;
 }
 
 .mobile-menu-tel {
@@ -614,6 +611,7 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background: #ffffff;
+  cursor: pointer;
 }
 
 .close-modal-button:hover, .close-modal-button:focus {
@@ -790,7 +788,6 @@ img {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: center;
 }
 
 .feature-description {
@@ -815,6 +812,12 @@ img {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 767px) {
+  .feature-title {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .features-list {
     display: flex;
@@ -831,6 +834,9 @@ img {
   }
   .feature-item:not(:last-child) {
     margin-bottom: 0;
+  }
+  .feature-title {
+    text-align: left;
   }
 }
 
@@ -1208,6 +1214,19 @@ img {
   margin-bottom: 8px;
 }
 
+/* оформление формы ПОДПИШИТЕСЬ НА РАССЫЛКУ*/
+.input-email {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
 @media screen and (min-width: 768px) {
   .container-footer {
     align-items: initial;
@@ -1231,6 +1250,21 @@ img {
   }
   .subscribe-by-mail {
     padding-top: 60px;
+  }
+  .input-email {
+    width: 59%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-email {
+    align-items: center;
   }
 }
 
@@ -1279,23 +1313,11 @@ img {
   }
   .input-email {
     margin-right: 12px;
+    width: 100%;
   }
 }
 
 .footer .social-network-icon {
   fill: #ffffff;
-}
-
-/* оформление формы ПОДПИШИТЕСЬ НА РАССЫЛКУ*/
-.input-email {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 100%;
-  padding-top: 15px;
-  padding-left: 16px;
-  padding-bottom: 15px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  background-color: transparent;
-  color: #ffffff;
-  border-radius: 4px;
 }
 /*# sourceMappingURL=main.css.map */

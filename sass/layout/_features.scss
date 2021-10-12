@@ -6,7 +6,6 @@
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: center;
 }
 
 .feature-description {
@@ -30,6 +29,12 @@
     margin-bottom: 30px;
   }
 }
+//mobile
+@media screen and (max-width: 767px) {
+  .feature-title {
+    text-align: center;
+  }
+}
 //768
 @media screen and (min-width: 768px) {
   .features-list {
@@ -47,6 +52,9 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
+  }
+  .feature-title {
+    text-align: left;
   }
 }
 
