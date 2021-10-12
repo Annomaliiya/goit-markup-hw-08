@@ -6,7 +6,6 @@
 
   width: 96vw;
   max-width: 450px;
-  height: 100vh;
   max-height: 610px;
   overflow-y: scroll;
 
@@ -91,6 +90,7 @@
 @media screen and (max-width: 479px) {
   .modal {
     min-width: 320px;
+    overflow-y: scroll;
   }
 }
 //768
